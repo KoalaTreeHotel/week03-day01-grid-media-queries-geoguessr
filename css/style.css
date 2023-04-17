@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: #000;
+    color: #e1dddd;
+    padding: 0 10px;
+}
+
+p {
+    font-family: "Merriweather", sans-serif;
+    font-size: 0.85rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+header {
+    padding: 0 20px;
+    background: #634103;
+    align-items: center;
+}
+
+header h1 {
+    grid-column: span 6;
+}
+
+header nav {
+    grid-column: 7 / span 6;
+    justify-self: right;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+main {
+    padding: 10px;
+    margin: 60px auto;
+    max-width: 1200px;
+}
+
+main img {
+    grid-column: span 6;
+    width: 100%;
+}
+
+main .intro {
+    grid-column: span 5;
+}
+
+main h3 {
+    grid-column: span 12;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+main .card {
+    grid-column: span 3;
+    background: #634103;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    main img {
+        grid-column: span 6;
+    }
+
+    main .intro {
+        grid-column: span 6;
+    }
+
+    main .card {
+        grid-column: span 4;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main img {
+        grid-column: span 6;
+    }
+
+    main .intro {
+        grid-column: span 12;
+    }
+
+    main .card {
+        grid-column: span 6;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 20ps 0px;
+    }
+
+    header h1 {
+        grid-column: span 12;
+        margin: 0;
+    }
+
+    header nav {
+        grid-column: span 12;
+        justify-self: left;
+        margin-bottom: 10px;
+    }
+
+    main img {
+        grid-column: span 6;
+    }
+
+    main .intro {
+        grid-column: span 12;
+    }
+
+    main .card {
+        grid-column: span 12;
+    }
+}
